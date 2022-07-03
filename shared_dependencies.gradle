@@ -8,6 +8,7 @@ dependencies {
 
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$test_junit_version"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
 
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
@@ -16,7 +17,6 @@ dependencies {
 
     implementation "com.google.dagger:hilt-android:$dagger_version"
     kapt "com.google.dagger:hilt-android-compiler:$dagger_version"
-    androidTestImplementation("com.google.dagger:hilt-android-testing:$dagger_version")
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$ktx_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$ktx_version"
