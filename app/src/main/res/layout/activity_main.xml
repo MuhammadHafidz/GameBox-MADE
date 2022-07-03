@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_game"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="@dimen/horizontal_20"
+        android:contentDescription="@string/favorite"
+        android:src="@drawable/ic_round_gamepad_24"
+        android:transitionName="imageTitle"
+        android:layout_marginTop="@dimen/top_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?colorPrimary" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_20"
+        android:text="@string/title"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold"
+        android:transitionName="title"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_game"
+        app:layout_constraintStart_toEndOf="@+id/iv_game"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="@dimen/width_30"
+        android:layout_height="@dimen/height_30"
+        android:layout_marginEnd="@dimen/horizontal_20"
+        android:contentDescription="@string/search"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+        app:layout_constraintEnd_toStartOf="@+id/iv_favorite"
+        app:layout_constraintTop_toTopOf="@+id/tv_title"
+        app:tint="?colorPrimary" />
+
+    <ImageView
+        android:id="@+id/iv_favorite"
+        android:layout_width="@dimen/width_30"
+        android:layout_height="@dimen/height_30"
+        android:layout_marginEnd="@dimen/horizontal_20"
+        android:src="@drawable/ic_like_fill"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+        app:layout_constraintEnd_toStartOf="@+id/iv_more"
+        app:layout_constraintTop_toTopOf="@+id/tv_title"
+        app:tint="?colorPrimary"
+        android:contentDescription="@string/favorite" />
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="@dimen/width_30"
+        android:layout_height="@dimen/height_30"
+        android:layout_marginEnd="@dimen/horizontal_20"
+        android:src="@drawable/ic_more"
+        app:tint="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title"
+        android:contentDescription="@string/option" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_game"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_game"
+        android:layout_marginTop="@dimen/top_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/view_loading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_game" />
+
+    <include
+        android:id="@+id/error_view"
+        android:visibility="gone"
+        layout="@layout/view_error"
+        android:layout_height="@dimen/height_0"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_game"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

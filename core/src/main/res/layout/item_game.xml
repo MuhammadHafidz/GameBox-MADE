@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    android:id="@+id/cv_root"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            tools:src = "@tools:sample/backgrounds/scenic"
+            android:contentDescription="@string/game_image" />
+
+        <TextView
+            android:layout_marginTop="@dimen/top_20"
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/cities"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/cities"
+            android:fontFamily="@font/poppins"
+            android:textSize="14sp"
+            android:layout_marginBottom="@dimen/bottom_20"
+            android:layout_marginHorizontal="@dimen/horizontal_20"/>
+
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

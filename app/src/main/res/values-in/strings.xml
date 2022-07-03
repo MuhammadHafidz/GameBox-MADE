@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GameBox</string>
+    <string name="title_favorite">Favorit</string>
+    <string name="title">GameBox</string>
+    <string name="option">Opsi</string>
+    <string name="favorite">Favorit</string>
+    <string name="game_image">Gambar Gim</string>
+    <string name="back">Kembali</string>
+    <string name="open_website">Buka Halaman Website</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="loading">Memuat</string>
+    <string name="overview">Ringkasan</string>
+    <string name="share_game">%1$s \nbuka di %2$s</string>
+    <string name="success_add_favorite">%1$s Sukses ditambahkan ke Favorit</string>
+    <string name="success_removed_favorite">%1$s Sukses dihapus dari Favorit</string>
+    <string name="search_here">Cari Disini</string>
+    <string name="search">Pencarian</string>
+</resources>
